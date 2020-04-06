@@ -6,7 +6,7 @@ export function searchVideo(term) {
   return async (dispatch) => {
     try {
       dispatch(searchVideoRequest());
-      const responseVideos = await youtubeSearch(API_KEY, { q: term });
+      const responseVideos = await youtubeSearch(API_KEY, { q: term, maxResults: 6 });
       dispatch(searchVideoSuccess(responseVideos.items));
     } catch (err) {
       dispatch(searchVideoFailed());

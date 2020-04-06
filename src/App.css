@@ -1,23 +1,52 @@
 .container {
   display: grid;
   grid-template-areas:
-  'search-bar search-bar search-bar search-bar'
+  'logo search-bar search-bar search-bar'
   'video-player video-player video-player video-list '
   'video-player video-player video-player video-list'
 }
 
+.logo {
+  grid-area: logo;
+  padding: 15px 15px;
+  text-shadow: #808080;
+}
+
 .search-bar {
   grid-area: search-bar;
-  background-color: red;
+  border: none;
 }
 
 .video-player {
   grid-area: video-player;
-  background-color: blue;
+  background-color: white;
+  border-top: 2px solid #eee;
+  margin-bottom: 40px;
 }
 
 .video-list {
   grid-area: video-list;
-  background-color: yellow;
+  background-color: #eee;
+  padding: 15px;
 }
 
+.video-title {
+  font-weight: 900px;
+  font-size: 22px;
+  color: black;
+  padding: 15px 0px 0px 20px;
+}
+
+.video-publishedAt {
+  padding: 0px 0px 0px 20px;
+  font-size: 18px;
+  color: #808080;
+  border-bottom: 1px solid #d3d3d3;
+  padding-bottom: 10px;
+}
+
+.video-description {
+  padding: 0 20px;
+  color: black;
+  border: 1px solid #eee;
+}

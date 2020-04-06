@@ -12,6 +12,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <div className="container">
+        <div className="logo"><h1>MySimpleYt</h1></div>
         <SearchBar />
         <VideoList />
         <VideoPlayer />
