@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useDispatch } from 'react-redux';
 import { Segment, Input } from 'semantic-ui-react';
 
+import * as actions from '../../store/actions/searchVideo';
+
 export default function SearchBar(props) {
-  // const [] = useState('');
+  const dispatch = useDispatch();
 
   function handleInputChange(e) {
     if (e.keyCode === 13) return handleSearchTerm(e.target.value);
   }
 
   function handleSearchTerm(term) {
-    console.log(term);
+    dispatch(actions.searchVideo(term));
   }
 
   return (
